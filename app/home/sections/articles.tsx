@@ -6,9 +6,9 @@ import {
   CardContainer,
   CardItem,
 } from "../../../components/ui/3d-card";
-import news1 from "@/public/images/news1.webp";
-import news2 from "@/public/images/news2.webp";
-import news3 from "@/public/images/news3.webp";
+import service1 from "@/public/images/service1.webp";
+import service2 from "@/public/images/service2.webp";
+import service3 from "@/public/images/service3.webp";
 import Link from "next/link";
 
 const news = [
@@ -17,21 +17,21 @@ const news = [
     title:
       "Client-Centric Financial Services: Our Approach and Success Stories Ideas.",
     date: "20 April 2024",
-    photoname: news1,
+    photoname: service1,
   },
   {
     id: 2,
     title:
       "Client-Centric Financial Services: Our Approach and Success Stories Ideas.",
     date: "27 April 2024",
-    photoname: news2,
+    photoname: service2,
   },
   {
     id: 3,
     title:
       "Client-Centric Financial Services: Our Approach and Success Stories Ideas.",
     date: "10 April 2024",
-    photoname: news3,
+    photoname: service3,
   },
 ];
 

@@ -9,6 +9,7 @@ import {
 } from "@radix-ui/react-icons";
 
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 const DropdownMenu = DropdownMenuPrimitive.Root;
 
@@ -89,18 +90,20 @@ const DropdownMenuItem = React.forwardRef<
 >(({ className, inset, services, ...props }, ref) => (
   <>
     {services?.map((service, index) => (
-      <DropdownMenuPrimitive.Item
-        key={index}
-        ref={ref}
-        className={cn(
-          "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
-          inset && "pl-8",
-          className
-        )}
-        {...props}
-      >
-        {service}
-      </DropdownMenuPrimitive.Item>
+      <Link href={`/services/${service.toLowerCase().replace(/\s+/g, "")}`}>
+        <DropdownMenuPrimitive.Item
+          key={index}
+          ref={ref}
+          className={cn(
+            "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+            inset && "pl-8",
+            className
+          )}
+          {...props}
+        >
+          {service}
+        </DropdownMenuPrimitive.Item>
+      </Link>
     ))}
   </>
 ));

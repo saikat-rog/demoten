@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { TopNavigationBar } from "./components/TopNavigationBar";
-import Footer from "./components/footer";
+import { TopNavigationBar } from "./home/TopNavigationBar";
+import Footer from "./home/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,9 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={inter.className} >
         <TopNavigationBar />
-        <div className="relative bg-home-gradient">
+        <div className="relative auto bg-home-gradient">
           {children}
           <Footer />
         </div>

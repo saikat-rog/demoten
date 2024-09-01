@@ -78,7 +78,6 @@ export const FloatingNav = ({
           <div key={`link-${idx}`} className="relative">
             {navItem.hasDropdown ? (
               <Link href={navItem.link}>
-                <>
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                       <div>
@@ -92,7 +91,6 @@ export const FloatingNav = ({
                       <DropdownMenuItem services={services} />
                     </DropdownMenuContent>
                   </DropdownMenu>
-                </>
               </Link>
             ) : (
               <Link

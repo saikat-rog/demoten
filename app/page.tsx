@@ -1,5 +1,5 @@
-import { TopNavigationBar } from "./components/TopNavigationBar";
-import { Home } from "./components/Home";
+import { TopNavigationBar } from "./home/TopNavigationBar";
+import { Home } from "./home/Home";
 
 export default function IndexPage() {
   return (
